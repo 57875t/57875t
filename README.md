@@ -31,3 +31,36 @@ reply_text = response['choices'][0]['message']['content']
 # ... (语音合成部分，将文本转换为语音并播放)
 
 playsound('reply.mp3')  # 假设这是合成后保存的语音文件路径
+from flask import Flask, request, jsonify
+import openai
+
+app = Flask(__name__)
+openai.api_key = 'your-api-key'
+
+@app.route('/chat', methods=['POST'])
+def chat():
+    user_message = request.json.get('message')
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[
+            {"role": "system", "content": "You are a helpful assistant."},
+            {"role": "user", "content": user_message}
+        ]
+    )
+    return jsonify({"response": response['choices'][0]['message']['content']})
+
+if __name__ == '__main__':
+    app.run(debug=True)
+import openai
+
+openai.api_key = 'your-api-key'
+
+response = openai.ChatCompletion.create(
+  model="gpt-3.5-turbo",
+  messages=[
+    {"role": "system", "content": "You are a helpful assistant."},
+    {"role": "user", "content": "What is the capital of France?"}
+  ]
+)
+
+print(response['choices'][0]['message']['content'])
