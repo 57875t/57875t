@@ -1,0 +1,4 @@
+<view class="container"><view class="title">风险提示记录</view>
+<block wx:for="{{riskAlerts}}" wx:key="id"><view class="card"><text class="tag tag-{{item.level}}">{{item.level}}</text><view>类型：{{item.type}}</view><view>{{item.message}}</view><view>{{complianceTips}}</view></view></block>
+<view class="card"><view>覆盖类型：重复用药、漏服、过期药、禁忌提示、疑似相互作用、特殊人群慎用</view></view>
+<view class="disclaimer">{{complianceText}}</view></view>

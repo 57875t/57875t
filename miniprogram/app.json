@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/scan/index",
+    "pages/voice/index",
+    "pages/reminder/index",
+    "pages/risk/index",
+    "pages/family/index",
+    "pages/settings/index",
+    "pages/disclaimer/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "银龄安药AI",
+    "navigationBarBackgroundColor": "#0f4c81",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f3f6fb"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

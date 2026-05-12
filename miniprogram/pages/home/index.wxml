@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="title">银龄安药AI</view>
+  <view class="card">
+    <view class="subtitle">一键服务入口</view>
+    <block wx:for="{{entries}}" wx:key="text">
+      <button class="big-btn" data-path="{{item.path}}" bindtap="go">{{item.text}}</button>
+    </block>
+  </view>
+
+  <view class="card">
+    <view class="subtitle">今日待办</view>
+    <view>待确认用药提醒：{{todoCount}} 项</view>
+  </view>
+
+  <view class="card">
+    <view class="subtitle">最近提醒状态</view>
+    <view>状态：{{latestStatus}}</view>
+    <view wx:if="{{latestRisk}}">最近风险：{{latestRisk.type}}（{{latestRisk.level}}）</view>
+  </view>
+
+  <view class="disclaimer">{{complianceText}}</view>
+</view>

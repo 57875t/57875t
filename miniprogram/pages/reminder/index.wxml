@@ -1,0 +1,9 @@
+<view class="container"><view class="title">用药提醒</view>
+<button class="big-btn" bindtap="checkFamilyNotify">模拟10分钟未确认</button>
+<block wx:for="{{reminders}}" wx:key="id"><view class="card"><view>提醒时间：{{item.time}}</view><view>状态：{{item.status}}</view><view wx:if="{{item.needFamilyNotify}}">提醒家属：是</view>
+<view>
+<button size="mini" data-id="{{item.id}}" data-status="confirmed" bindtap="updateStatus">确认</button>
+<button size="mini" data-id="{{item.id}}" data-status="snoozed" bindtap="updateStatus">延后</button>
+<button size="mini" data-id="{{item.id}}" data-status="missed" bindtap="updateStatus">漏服</button>
+</view></view></block>
+<view class="disclaimer">{{complianceText}}</view></view>

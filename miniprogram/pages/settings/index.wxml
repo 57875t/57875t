@@ -1,0 +1,5 @@
+<view class="container"><view class="title">我的 / 设置</view>
+<view class="card">姓名：{{user.name}} | 年龄：{{user.age}}</view>
+<view class="card"><view>适老化字体</view><block wx:for="{{fontSizes}}" wx:key="*this"><button size="mini" data-size="{{item}}" bindtap="setFontSize">{{item}}</button></block></view>
+<view class="card">提醒时间：{{reminderTimes.join(' / ')}}</view>
+<button class="big-btn" bindtap="goDisclaimer">隐私与免责声明</button></view>
