@@ -1,0 +1,1 @@
+<view class="container"><view class="title">隐私与免责声明</view><view class="card"><view>{{complianceText}}</view></view></view>

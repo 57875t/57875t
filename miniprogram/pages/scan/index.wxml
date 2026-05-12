@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="title">拍照识药</view>
+  <button class="big-btn" bindtap="chooseImage">上传/拍照药盒图片</button>
+  <view wx:if="{{fileName}}">已选择：{{fileName}}</view>
+  <view class="card" wx:if="{{result}}">
+    <view>药品名称：{{result.name}}</view><view>规格：{{result.spec}}</view><view>剂型：{{result.dosageForm}}</view>
+    <view>生产企业：{{result.manufacturer}}</view><view>批准文号：{{result.approvalNo}}</view><view>有效期：{{result.expiryDate}}</view>
+    <button class="big-btn" bindtap="confirmManual">请人工确认</button>
+  </view>
+  <view class="disclaimer">{{complianceText}}</view>
+</view>

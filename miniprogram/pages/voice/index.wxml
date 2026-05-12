@@ -1,0 +1,5 @@
+<view class="container"><view class="title">语音记录</view>
+<button class="big-btn" bindtap="mockVoiceInput">语音输入（模拟）</button>
+<textarea value="{{inputText}}" style="height:140rpx;background:#fff;padding:16rpx;border-radius:12rpx"></textarea>
+<view class="card"><view>服药时间：{{log.takeTime}}</view><view>药品：{{log.medication}}</view><view>身体感受：{{log.feeling}}</view><view>是否漏服：{{log.missed?'是':'否'}}</view><view>待核对事项：{{log.toCheck}}</view><view>老人反馈记录：{{log.summary}}</view></view>
+<view class="disclaimer">{{complianceText}}</view></view>

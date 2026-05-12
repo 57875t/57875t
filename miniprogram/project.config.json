@@ -1,0 +1,10 @@
+{
+  "description": "银龄安药AI MVP",
+  "packOptions": {"ignore":[]},
+  "setting": {"es6": true, "minified": false},
+  "compileType": "miniprogram",
+  "libVersion": "3.6.4",
+  "appid": "touristappid",
+  "projectname": "银龄安药AI",
+  "condition": {}
+}

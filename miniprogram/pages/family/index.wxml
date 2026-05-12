@@ -1,0 +1,6 @@
+<view class="container"><view class="title">家属中心</view>
+<view class="card">提醒完成情况：已确认 {{reminders[1].time}}，待确认 {{reminders[0].time}}</view>
+<view class="card">风险记录：{{riskAlerts.length}} 条</view>
+<view class="card">语音反馈摘要：{{voiceLogs[0].summary}}</view>
+<button class="big-btn" bindtap="contact">一键联系家属（{{family.name}}）</button>
+<view class="disclaimer">{{complianceText}}</view></view>
